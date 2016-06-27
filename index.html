@@ -4,15 +4,66 @@
 <head>
 
 <link rel="stylesheet" type="text/css" href="style.css">
-</head>
+<link rel="stylesheet" type="text/css" href="animate.css">
+
+
+
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js">
+
+
+$(document).ready(function(){
+    $('section[data-type="background"]').each(function(){
+        var $bgobj = $(this); // assigning the object
+
+        $(window).scroll(function() {
+            var yPos = -($window.scrollTop() / $bgobj.data('speed'));
+
+            // Put together our final background position
+            var coords = '10% '+ yPos + 'px';
+
+            // Move the background
+            $bgobj.css({ backgroundPosition: coords });
+        });
+    });
+});
+
+
+</script>
 
 
 </head>
+
 
 
 <body>
 
-<h1 class = "website_title"> Robert Brennan vc </h1>
+
+
+
+
+<div class="banner" ><p class ="write">Brennan Data Consulting </p></div>
+<div class="button1">Button 1</div><div class="button2">Button 2</div><div class="button3" >Button 3</div><div class="button4" >Button 4</div>
+ 
+<section id="about" data-type="background" data-speed="5" class="pages">
+  <div class = "art">
+    <h1>Data Protection and You</h1>
+        <h2> Data protection legislation is important for every business. Larger companies have had to constantly provide their employees with training to keep up with the new legislation. At Brennan consulting we aim to provide condensed information which
+          is relevent to you. </h2>
+
+  </div>
+
+   </section>
+
+<section id="home" data-type="background" data-speed="100" class="pages">
+  <div class = "art">
+        Simple Parallax Scroll
+
+  </div>
+</section>
+
+
+
+
 
 
 </body>
